@@ -1,0 +1,12 @@
+{
+  "name": "mirelly-lash-design",
+  "version": "1.0.0",
+  "description": "Site (front-end + back-end) da Mirelly Lash Design",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
