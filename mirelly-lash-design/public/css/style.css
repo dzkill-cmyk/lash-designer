@@ -317,3 +317,34 @@ footer{padding:34px 0; text-align:center; font-size:13px; opacity:.6;}
   flex: 1 !important;
 }
 
+/* --- AJUSTES PARA CELULAR --- */
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  /* Impede que o conteúdo saia pela direita */
+  body {
+    padding: 0 10px;
+  }
+  
+  /* Ajusta secções flexíveis para ficarem em coluna no telemóvel */
+  .sobre, #sobre, .hero, .banner {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px;
+    gap: 20px;
+  }
+
+  /* Garante que imagens não ultrapassem a largura do ecrã */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
