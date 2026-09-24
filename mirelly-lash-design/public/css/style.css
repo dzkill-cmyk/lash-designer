@@ -317,34 +317,52 @@ footer{padding:34px 0; text-align:center; font-size:13px; opacity:.6;}
   flex: 1 !important;
 }
 
-/* --- AJUSTES PARA CELULAR --- */
+/* --- CORREÇÃO DEFINITIVA DA GALERIA --- */
 
-* {
-  box-sizing: border-box;
+/* No Computador: 4 colunas bem separadas */
+.gallery-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 20px !important; /* Cria o espaço entre as fotos */
+  width: 100% !important;
+  margin-top: 30px !important;
 }
 
-body, html {
-  max-width: 100%;
-  overflow-x: hidden;
+.gallery-grid .photo {
+  width: 100% !important;
+  min-height: 250px !important;
+  border-radius: 14px !important;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+/* No Telemóvel: 2 colunas com espaço */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+  
+  .gallery-grid .photo {
+    min-height: 180px !important;
+  }
 }
 
 @media (max-width: 768px) {
-  /* Impede que o conteúdo saia pela direita */
-  body {
-    padding: 0 10px;
-  }
-  
-  /* Ajusta secções flexíveis para ficarem em coluna no telemóvel */
-  .sobre, #sobre, .hero, .banner {
-    display: flex;
-    flex-direction: column;
-    padding: 30px 15px;
-    gap: 20px;
+  /* Alinha foto e texto em coluna no telemóvel */
+  .sobre, #sobre, .about-section, section:has(#sobre) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 30px 20px !important;
+    gap: 20px !important;
   }
 
-  /* Garante que imagens não ultrapassem a largura do ecrã */
-  img {
-    max-width: 100%;
-    height: auto;
+  /* Impede que a foto ocupe a tela inteira */
+  .sobre img, #sobre img, .about-section img {
+    width: 100% !important;
+    max-width: 300px !important;
+    height: auto !important;
+    border-radius: 12px !important;
   }
 }
