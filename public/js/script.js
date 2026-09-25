@@ -53,6 +53,6 @@ form.addEventListener('submit', async (e) => {
   );
   formMsg.textContent = 'Mensagem pronta! Abrindo o WhatsApp para confirmar com a Mirelly...';
   formMsg.style.color = '#c9a24b';
-  window.open(`https://wa.me/5519997487604?text=${texto}`, '_blank');
+  window.open(`https://wa.me/551984225603?text=${texto}`, '_blank');
   form.reset();
 });
