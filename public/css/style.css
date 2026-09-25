@@ -503,3 +503,34 @@ footer{ padding:34px 0; text-align:center; font-size:13px; opacity:.6; }
   overflow-x:hidden;
   width:100%;
 }
+
+/* === GALERIA MOBILE — regra única e definitiva === */
+@media (max-width:640px){
+  .gallery-grid{
+    display:grid !important;
+    grid-template-columns:repeat(2,1fr) !important;
+    grid-auto-rows:1fr !important;
+    gap:14px !important;
+    padding:0 !important;
+    margin-top:20px !important;
+  }
+  .gallery-grid .photo{
+    width:100% !important;
+    height:150px !important;
+    max-height:150px !important;
+    min-height:0 !important;
+    aspect-ratio:auto !important;
+    border-radius:14px !important;
+    margin:0 !important;
+  }
+}
+
+@media (max-width:380px){
+  .gallery-grid{
+    grid-template-columns:1fr !important;
+  }
+  .gallery-grid .photo{
+    height:180px !important;
+    max-height:180px !important;
+  }
+}
