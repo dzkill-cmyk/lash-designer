@@ -231,3 +231,9 @@ footer{ padding:34px 0; text-align:center; font-size:13px; opacity:.6; }
   .reveal{ opacity:1; transform:none; transition:none; }
   html{ scroll-behavior:auto; }
 }
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px; /* espaçamento automático entre os itens */
+}
